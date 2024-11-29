@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷雷的个人网站</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">雷雷</div>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#about">关于我</a>
+                <a href="#chat">AI聊天</a>
+                <button class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 轮播图部分 -->
+    <section id="home" class="carousel-section">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/slide1.jpg" alt="编程工作照">
+                    <div class="carousel-caption">热爱编程</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide2.jpg" alt="旅行照片">
+                    <div class="carousel-caption">环球旅行</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide3.jpg" alt="摄影作品">
+                    <div class="carousel-caption">摄影作品</div>
+                </div>
+            </div>
+            <button class="carousel-prev">&lt;</button>
+            <button class="carousel-next">&gt;</button>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <img src="images/avatar.jpg" alt="雷雷的头像" class="avatar">
+            <h2>关于我</h2>
+            <p>你好，我是雷雷，一名充满激情的全栈开发工程师。热爱编程、摄影和创意设计，同时也是一个环球旅行爱好者。我相信技术能够改变世界，并且一直在探索如何将AI技术应用到实际生活中。</p>
+            <p>技术栈：JavaScript, Python, React, Node.js, AI开发</p>
+        </div>
+    </section>
+
+    <!-- 在chat-section外面包一层 -->
+    <div class="chat-section-wrapper">
+        <section id="chat" class="chat-section">
+            <div class="chat-container">
+                <div class="chat-messages">
+                    <!-- 消息将由JavaScript动态添加 -->
+                </div>
+                <div class="chat-input-area">
+                    <textarea class="chat-input" placeholder="输入消息..."></textarea>
+                    <button class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- 社交媒体部分 -->
+            <div class="footer-social">
+                <h3>关注我</h3>
+                <div class="social-icons">
+                    <a href="https://space.bilibili.com/你的B站ID" target="_blank" title="哔哩哔哩">
+                        <i class="fa-brands fa-bilibili"></i>
+                    </a>
+                    <a href="https://weibo.com/你的微博ID" target="_blank" title="微博">
+                        <i class="fab fa-weibo"></i>
+                    </a>
+                    <a href="https://www.douyin.com/user/你的抖音ID" target="_blank" title="抖音">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 分隔线 -->
+            <div class="footer-divider"></div>
+
+            <!-- 版权信息部分 -->
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>&copy; 2024 雷雷</p>
+                    <div class="footer-links">
+                        <a href="mailto:your.email@example.com">联系我</a>
+                        <span class="separator">|</span>
+                        <a href="#">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 返回顶部按钮 -->
+            <button class="back-to-top" title="返回顶部">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- 在body底部，main.js之前添加 -->
+    <script src="https://cdn.jsdelivr.net/npm/openai@4.28.0/dist/openai.min.js"></script>
+    <script>
+        // 确保 OpenAI 对象可用
+        window.OpenAI = window.OpenAI || OpenAI;
+    </script>
+    <script src="main.js"></script>
+</body>
+</html> 
